@@ -23,7 +23,7 @@ export PATH=$PATH
 
 # Gitlab Default
 GITLAB_NAME="gitlab"
-GITLAB_MODE="unless-stopped"
+GITLAB_MODE="always"
 GITLAB_HOSTNAME="gitlab.example.com"
 GITLAB_IMG="docker.io/gitlab/gitlab-ce:latest"
 GITLAB_HTTP_PORT="80"
