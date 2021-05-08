@@ -25,7 +25,7 @@ export PATH=$PATH
 GITLAB_NAME="gitlab"
 GITLAB_MODE="always"
 GITLAB_HOSTNAME="gitlab.ocp4.ybkim.local"
-GITLAB_IMG="registry.ocp4.ybkim.local/gitlab/gitlab-ce:13.11.3-ce.0"
+GITLAB_IMG="docker.io/gitlab/gitlab-ce:13.11.3-ce.0"
 GITLAB_HTTP_PORT="80"
 GITLAB_HTTPS_PORT="443"
 CONTAINER_GITLAB_HTTP_PORT="80"
@@ -82,8 +82,7 @@ function f_gitlab_init_start {
     -v $HOST_GITLAB_ETC_DIR:$CONTAINER_GITLAB_ETC_DIR \
     -v $HOST_GITLAB_VAR_LOG_DIR:$CONTAINER_GITLAB_VAR_LOG_DIR \
     -v $HOST_GITLAB_VAR_OPT_DIR:$CONTAINER_GITLAB_VAR_OPT_DIR \
-    $GITLAB_IMG
-#> /dev/null 2>&1
+    $GITLAB_IMG > /dev/null 2>&1
 
     # Enable Systemd file
     podman generate systemd --name $GITLAB_NAME > /lib/systemd/system/container-$GITLAB_NAME.service
