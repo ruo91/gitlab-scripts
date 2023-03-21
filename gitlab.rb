@@ -24,8 +24,8 @@ export PATH=$PATH
 # Gitlab Default
 GITLAB_NAME="gitlab"
 GITLAB_MODE="always"
-GITLAB_HOSTNAME="gitlab.ss.ocpcore.com"
-GITLAB_IMG="registry.ss.ocpcore.com:5000/gitlab/gitlab-ce:15.9.2-ce.0"
+GITLAB_HOSTNAME="gitlab.ocp4.local"
+GITLAB_IMG="registry.ocp4.local:5000/gitlab/gitlab-ce:15.9.2-ce.0"
 GITLAB_HTTP_PORT="8080"
 GITLAB_HTTPS_PORT="443"
 CONTAINER_GITLAB_HTTP_PORT="80"
